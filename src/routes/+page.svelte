@@ -145,12 +145,6 @@
       </p>
     </header>
 
-    <!-- スコアボード -->
-    <div class="flex w-full items-stretch gap-3">
-      {@render playerCard('O')}
-      {@render playerCard('X')}
-    </div>
-
     <!-- ステータス -->
     <div class="flex h-7 items-center justify-center">
       {#if winner}
@@ -232,6 +226,15 @@
           スコアもリセット
         </button>
       {/if}
+    </div>
+
+    <!-- スコアボード（勝敗の記録） -->
+    <div class="flex w-full flex-col items-center gap-2">
+      <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-slate-600">score</span>
+      <div class="flex w-full items-stretch gap-3">
+        {@render playerCard('O')}
+        {@render playerCard('X')}
+      </div>
     </div>
 
     <!-- ルールのヒント -->
